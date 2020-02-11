@@ -1,0 +1,39 @@
+{
+    "env": {
+        "es6": true,
+        "node": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "extends": ["prettier", "@react-native-community"],
+    "plugins": ["prettier", "import-helpers", "@typescript-eslint"],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "rules": {
+        "camelcase": "off",
+        "indent": ["error", 4],
+        "no-param-reassign": "off",
+        "prettier/prettier": "error",
+        "max-len": [1, { "code": 120 }],
+        "class-methods-use-this": "off",
+        "comma-dangle": ["error", "never"],
+        "no-unused-vars": ["error", { "argsIgnorePattern": "next" }],
+        "arrow-parens": [2, "as-needed", { "requireForBlockBody": true }],
+        "import-helpers/order-imports": [
+            "warn",
+            {
+                "newlinesBetween": "always", // new line between groups
+                "groups": ["module", ["parent", "sibling", "index"]],
+                "alphabetize": { "order": "asc", "ignoreCase": true }
+            }
+        ]
+    }
+}

@@ -1,0 +1,97 @@
+{
+    "name": "react-native-cfactory",
+    "title": "cFactory",
+    "version": "0.0.1",
+    "description": "The objective is help anyone that needs the a updated component library.",
+    "main": "index.js",
+    "lint-staged": {
+        "*.{js, ts, jsx, tsx}": [
+            "eslint '*.{js,ts,jsx,tsx}' --fix"
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged",
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+            "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+        }
+    },
+    "scripts": {
+        "lint": "eslint '*.{js,ts,tsx}'",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "bugs": {
+        "url": "https://github.com/igor-nm/react-native-cfactory/issues"
+    },
+    "author": {
+        "name": "Igor Martucelli",
+        "email": "martucelli.igor@gmail.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/igor-nm/react-native-cfactory.git",
+        "baseUrl": "https://github.com/igor-nm/react-native-cfactory"
+    },
+    "keywords": [
+        "ui",
+        "ios",
+        "react",
+        "mobile",
+        "android",
+        "react native",
+        "react-native",
+        "react-component",
+        "react-native-component"
+    ],
+    "license": "MIT",
+    "licenseFilename": "LICENSE",
+    "readmeFilename": "README.md",
+    "peerDependencies": {
+        "react": "^16.8.1",
+        "react-native": ">=0.59.0-rc.0 <1.0.x",
+        "styled-components": "^5.0.1"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^8.3.5",
+        "@commitlint/config-conventional": "^8.3.4",
+        "@react-native-community/eslint-config": "^0.0.7",
+        "@types/jest": "^25.1.2",
+        "@types/react": "^16.9.19",
+        "@types/react-native": "^0.61.12",
+        "@types/styled-components": "^4.4.2",
+        "@typescript-eslint/eslint-plugin": "^2.19.0",
+        "@typescript-eslint/parser": "^2.19.2",
+        "babel-jest": "^25.1.0",
+        "commitizen": "^4.0.3",
+        "eslint": "^5.16.0",
+        "eslint-config-prettier": "^6.10.0",
+        "eslint-plugin-import": "^2.20.1",
+        "eslint-plugin-import-helpers": "^1.0.2",
+        "eslint-plugin-prettier": "^3.1.2",
+        "husky": "^4.2.1",
+        "jest": "^25.1.0",
+        "lint-staged": "^10.0.7",
+        "metro-react-native-babel-preset": "^0.58.0",
+        "prettier": "^1.19.1",
+        "react": "^16.12.0",
+        "react-native": "^0.61.5",
+        "styled-components": "^5.0.1",
+        "typescript": "^3.7.5"
+    },
+    "jest": {
+        "preset": "react-native",
+        "moduleFileExtensions": [
+            "ts",
+            "tsx",
+            "js",
+            "jsx",
+            "json",
+            "node"
+        ]
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    }
+}
